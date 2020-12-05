@@ -1,0 +1,33 @@
+matrix:
+  include:
+    - language: java
+      sudo: false
+      before_script:
+        - openssl aes-256-cbc -K $encrypted_c193b0c59a86_key -iv $encrypted_c193b0c59a86_iv -in client-secret.json.enc -out client-secret.json -d
+        - gcloud auth activate-service-account --key-file client-secret.json
+        - gcloud config set project wise-isotope-255311
+        - gcloud info
+      script:
+        - export GOOGLE_APPLICATION_CREDENTIALS="$TRAVIS_BUILD_DIR/client-secret.json"
+        - cd restful-web-services
+        - mvn clean install
+        - mvn test
+        - if [ $TRAVIS_BRANCH = "deploy" ]; then mvn appengine:deploy; fi
+
+    - language: node_js
+      node_js:
+        - 12
+      sudo: false
+      before_script:
+        - openssl aes-256-cbc -K $encrypted_c193b0c59a86_key -iv $encrypted_c193b0c59a86_iv -in client-secret.json.enc -out client-secret.json -d
+        - gcloud auth activate-service-account --key-file client-secret.json
+        - gcloud config set app/use_deprecated_preparation True
+      script:
+        - gcloud config set project wise-isotope-255311
+        - gcloud info
+        - cd frontend/todo-app
+        - npm clean-install
+        - CI=false npm run build
+        - if [ $TRAVIS_BRANCH = "deploy" ]; then gcloud -q app deploy; fi
+      skip_files:
+        - ^node_modules/.*$
