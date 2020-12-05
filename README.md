@@ -1,6 +1,6 @@
 # Mentoring Web-App
 This project is a web based app where students can register their courses and update the details. <br>
-Students will also be able to register as a mentor if they are elidgable or as a mentee if they require <r>
+Students will also be able to register as a mentor if they are elidgable or as a mentee if they require <br>
 help. This project was created by using the template provided by the teaching team.<br><br>
 
 In this project, functions as follow are implemented,
@@ -8,6 +8,9 @@ In this project, functions as follow are implemented,
   - Register and update course details 
   - Register and quit as a mentor for a particular course
   - Make and cancel an appoinment for a particular course as a mentee
+
+## Installation ##
+To run this project, please go through the instructions below.
 
 # Your First Full Stack Application with React and Spring Boot
 <sub>Instructions made by RMIT Teaching Team of COSC2299 July-Nov 2019 Term </sub>
