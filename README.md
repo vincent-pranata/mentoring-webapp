@@ -9,6 +9,14 @@ In this project, functions as follow are implemented,
   - Register and quit as a mentor for a particular course
   - Make and cancel an appoinment for a particular course as a mentee
 
+Developers
+---
+- [Vincent Pranata](https://github.com/vincent-pranata)
+- [Nicholas Oliver](https://github.com/s3752041)
+- [Guoxin Shan]()
+- [Jerald Carter Tienzo]()
+
+
 ## Installation ##
 To run this project, please go through the instructions below.
 
