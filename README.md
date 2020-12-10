@@ -13,8 +13,8 @@ Developers
 ---
 - [Vincent Pranata](https://github.com/vincent-pranata)
 - [Nicholas Oliver](https://github.com/s3752041)
-- [Guoxin Shan]()
-- [Jerald Carter Tienzo]()
+- [Guoxin Shan](https://github.com/GuoxinShan)
+- [Jerald Carter Tienzo](https://github.com/rmit-s3658244-jerald-tienzo)
 
 
 ## Installation ##
